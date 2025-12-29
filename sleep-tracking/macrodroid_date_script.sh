@@ -33,12 +33,12 @@ if [ $current_hour -ge 18 ] && [ $current_hour -le 23 ]; then
     # Between 6:00 PM (18:00) and 11:59 PM (23:59)
     # User is going to bed - log as tomorrow's sleep session
     date -d "@$(( $(date +%s) + 86400 ))" +%Y-%m-%d
-    
+
 elif [ $current_hour -ge 0 ] && [ $current_hour -le 5 ]; then
     # Between 12:00 AM (00:00) and 5:59 AM (05:59)
-    # User is still sleeping - keep same date as bedtime (tomorrow)
-    date -d "@$(( $(date +%s) + 86400 ))" +%Y-%m-%d
-    
+    # User is still sleeping - return today's date (the day you'll wake up on)
+    date +%Y-%m-%d
+
 else
     # Between 6:00 AM (06:00) and 5:59 PM (17:59)
     # User is awake - return today's date
