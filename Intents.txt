@@ -1,0 +1,19 @@
+# Start Shizuku
+
+Action: moe.shizuku.privileged.api.START
+Package: moe.shizuku.privileged.api
+Class: moe.shizuku.manager.receiver.ManualStartReceiver
+Target: Broadcast Receiver
+
+# Stop Shizuku
+
+Action: moe.shizuku.privileged.api.STOP
+Package: moe.shizuku.privileged.api
+Class: moe.shizuku.manager.receiver.ManualStopReceiver
+Target: Broadcast Receiver
+
+# Open About Phone
+
+Action=android.intent.action.MAIN
+Package Name=com.android.settings
+Class Name=com.android.settings/com.android.settings.Settings$MyDeviceInfoActivity
