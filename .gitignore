@@ -1,2 +1,10 @@
 /laptop-info/Laptop_Info_Errors.log
 /laptop-info/*.csv
+/youtube-downloader/ffmpeg.exe
+/youtube-downloader/yt-dlp.exe
+/youtube-downloader/deno.exe
+/youtube-downloader/node.exe
+/youtube-downloader/bun.exe
+/youtube-downloader/vulkan-1.dll
+/youtube-downloader/downloads/
+/youtube-downloader/archive.txt
